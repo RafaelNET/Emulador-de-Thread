@@ -1,5 +1,7 @@
-# Emulador-de-Thread
-Projeto conceitual para geração de thread numa aplicação "Windows Forms"
+# Emulador de Thread
+Projeto conceitual para geração de thread numa aplicação "Windows Forms".
+
+Este programa simula o processamento das threads após serem iniciadas, usando timer
 
 Tela executando:
 
