@@ -31,7 +31,7 @@ namespace EmuladorThread
             //listaThreads.Clear();
 
             this.Enabled = false;
-            for (var index = 1; index <= 200; index++)
+            for (var index = 1; index <= 5000; index++)
             {
                 ParameterizedThreadStart start = new ParameterizedThreadStart(minhaFuncao);
                 var novaThread = new Thread(start);
@@ -39,6 +39,7 @@ namespace EmuladorThread
                 // novaThread.IsBackground = True
                 novaThread.Priority = ThreadPriority.Highest;
                 novaThread.Start(index);
+                Application.DoEvents();
                 txtNrThreads.Text = (System.Convert.ToInt32(txtNrThreads.Text) + 1).ToString();
                 txtNrThreads.Refresh();
             }
